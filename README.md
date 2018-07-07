@@ -2,7 +2,7 @@
 
 docker build -t ejojmjn-yaws .
 
-docker run -it --net=host \
-    -v /home/ejojmjn/yaws-config:/etc/yaws \
-    -v /home/ejojmjn/Downloads/smm:/var/yaws/www \
+docker run -it --net=host -p 80:80 \
+    -v /home/ejojmjn/smmtester/yaws-config:/etc/yaws \
+    -v /home/ejojmjn/smmtester/www:/var/yaws/www \
     ejojmjn-yaws
