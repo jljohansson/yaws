@@ -9,7 +9,7 @@ RUN apk add --no-cache --virtual .build-dependencies \
     && ./configure --localstatedir=/var --sysconfdir=/etc \
     && make install \
     && apk del .build-dependencies \
-    && cd / ; rm -rf yaws \
+    && cd / ; rm -rf yaws
 
 EXPOSE 80
 ENTRYPOINT /usr/local/bin/yaws -i
